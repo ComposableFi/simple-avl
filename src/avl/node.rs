@@ -1,10 +1,11 @@
-use std::{borrow::Borrow, mem};
+use alloc::boxed::Box;
+use core::{borrow::Borrow, mem};
 
 use sha2::{Digest, Sha256};
 use tendermint::hash::Hash;
 
-use crate::app::store::avl::as_bytes::AsBytes;
-use crate::app::store::avl::{proof, HASH_ALGO};
+use crate::avl::as_bytes::AsBytes;
+use crate::avl::{proof, HASH_ALGO};
 
 pub type NodeRef<T, V> = Option<Box<AvlNode<T, V>>>;
 
@@ -101,7 +102,7 @@ where
             },
             Some(right) => match &self.left {
                 None => self.height = right.height + 1,
-                Some(left) => self.height = std::cmp::max(left.height, right.height) + 1,
+                Some(left) => self.height = core::cmp::max(left.height, right.height) + 1,
             },
         }
     }

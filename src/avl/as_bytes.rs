@@ -6,6 +6,9 @@
 //! a slice of bytes.
 //!
 //! To add support for a new type in the AVL Tree, simply implement the `AsByte` trait for that type.
+use alloc::string::String;
+use alloc::vec::Vec;
+use core::prelude::v1::*;
 
 pub enum ByteSlice<'a> {
     Slice(&'a [u8]),

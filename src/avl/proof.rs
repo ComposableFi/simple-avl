@@ -2,6 +2,7 @@
 //!
 //! This module provides the ICS23 proof spec, which can be used to verify the existence of a value
 //! in the AVL Tree.
+use alloc::vec;
 use ics23::{HashOp, InnerSpec, LeafOp, LengthOp, ProofSpec};
 
 pub const LEAF_PREFIX: [u8; 64] = [0; 64]; // 64 bytes of zeroes.
