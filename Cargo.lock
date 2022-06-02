@@ -758,8 +758,7 @@ dependencies = [
 [[package]]
 name = "tendermint"
 version = "0.23.7"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3ca881fa4dedd2b46334f13be7fbc8cc1549ba4be5a833fe4e73d1a1baaf7949"
+source = "git+https://github.com/composableFi/tendermint-rs?branch=seun-0.23.7#cb79c164e84c3d9176b374f2b227393fe000e691"
 dependencies = [
  "async-trait",
  "bytes",
@@ -787,8 +786,7 @@ dependencies = [
 [[package]]
 name = "tendermint-proto"
 version = "0.23.7"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b71f925d74903f4abbdc4af0110635a307b3cb05b175fdff4a7247c14a4d0874"
+source = "git+https://github.com/composableFi/tendermint-rs?branch=seun-0.23.7#cb79c164e84c3d9176b374f2b227393fe000e691"
 dependencies = [
  "bytes",
  "flex-error",
